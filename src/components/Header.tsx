@@ -3,16 +3,19 @@
 import { useTranslations } from "next-intl";
 import { Github, Linkedin, Mail } from "lucide-react";
 import LanguageToggle from "./LanguageToggle";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 
 const navItems = ["about", "experience", "projects", "skills"] as const;
 
 export default function Header() {
   const t = useTranslations();
   const [activeSection, setActiveSection] = useState<string>("about");
+  const isScrollingRef = useRef(false);
+  const scrollTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   useEffect(() => {
     const handleScroll = () => {
+      if (isScrollingRef.current) return;
       if (window.scrollY < 100) {
         setActiveSection("about");
         return;
@@ -21,6 +24,7 @@ export default function Header() {
 
     const observer = new IntersectionObserver(
       (entries) => {
+        if (isScrollingRef.current) return;
         if (window.scrollY < 100) return;
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
@@ -46,8 +50,25 @@ export default function Header() {
   }, []);
 
   const scrollTo = (id: string) => {
+    isScrollingRef.current = true;
     setActiveSection(id);
     document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+
+    if (scrollTimeoutRef.current) clearTimeout(scrollTimeoutRef.current);
+
+    const checkScrollEnd = () => {
+      if (scrollTimeoutRef.current) clearTimeout(scrollTimeoutRef.current);
+      scrollTimeoutRef.current = setTimeout(() => {
+        isScrollingRef.current = false;
+        window.removeEventListener("scroll", checkScrollEnd);
+      }, 150);
+    };
+
+    window.addEventListener("scroll", checkScrollEnd, { passive: true });
+    // Fallback in case scroll event doesn't fire (already at target)
+    scrollTimeoutRef.current = setTimeout(() => {
+      isScrollingRef.current = false;
+    }, 150);
   };
 
   return (

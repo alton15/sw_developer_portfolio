@@ -12,7 +12,7 @@
   },
   "about": {
     "title": "About",
-    "description": "Backend engineer specializing in Python, with experience in large-scale traffic handling on AWS, data pipeline design, and real-time event processing systems. Passionate about designing stable and scalable service architectures."
+    "description": "Backend engineer with 5+ years of experience, specializing in Python. Experienced in large-scale traffic handling on AWS, real-time data pipeline design, and search engine optimization. Achieved 94.8x throughput improvement through Pub/Sub architecture and contributed to growing a service from 300K to 10M+ monthly page views."
   },
   "experience": {
     "title": "Experience",
@@ -22,9 +22,10 @@
         "company": "AITRICS",
         "role": "Backend Engineer",
         "description": [
-          "Led migration from REST API to GraphQL, improving API efficiency",
-          "Built Pub/Sub-based real-time data pipeline achieving 94.8x performance improvement",
-          "Established monitoring system with Datadog and incident response processes"
+          "Migrated REST API to GraphQL, enabling precise data fetching, eliminating over-fetching, and improving client development productivity",
+          "Redesigned scheduler-based batch processing to RabbitMQ Pub/Sub architecture, achieving 94.8x average throughput improvement with per-patient event processing and real-time alerts",
+          "Implemented message failover strategies including Retry, DLQ, and Sequence management for reliable message processing",
+          "Built Datadog-based APM dashboards, error rate tracking, service health monitoring, and on-call alerting"
         ],
         "tech": ["Python", "FastAPI", "GraphQL", "Docker", "RabbitMQ", "Datadog"]
       },
@@ -33,10 +34,10 @@
         "company": "Plan.I",
         "role": "Backend Engineer",
         "description": [
-          "Developed backend for multiple B2B/B2C services including AI Canvas, VORY-Q, VODA, and AIVORY",
-          "Designed AWS-based infrastructure with Docker/Kubernetes container orchestration",
-          "Optimized large-scale search engines using Elasticsearch/OpenSearch",
-          "Contributed to growing service traffic from 300K to 10M+ monthly page views"
+          "Owned end-to-end backend design and operations for multiple B2B/B2C services including VODA, VORY-Q, AI Canvas, and AIVORY",
+          "Built behavioral data collection pipeline using AWS API Gateway + SQS, supporting growth from 300K to 10M+ monthly PV",
+          "Managed GPU resources on Kubernetes and designed a Redis-backed workload-aware job scheduler",
+          "Optimized Elasticsearch incremental indexing, reducing data visualization processing time by up to 95%"
         ],
         "tech": ["Python", "Django", "FastAPI", "AWS", "Docker", "Kubernetes", "Redis", "Elasticsearch"]
       }
@@ -50,48 +51,48 @@
         "period": "2024",
         "description": "Designed backend architecture for real-time vital sign monitoring and AI prediction system",
         "highlights": [
-          "Achieved 94.8x speed improvement with Pub/Sub-based real-time processing",
-          "Significantly improved API call efficiency through GraphQL migration"
+          "Redesigned batch pipeline to event-driven Pub/Sub, achieving 94.8x throughput improvement",
+          "GraphQL migration eliminating over-fetching and improving API abstraction"
         ],
         "tech": ["Python", "FastAPI", "GraphQL", "RabbitMQ", "Docker"]
       },
       {
         "name": "AI Canvas",
-        "period": "2023 — 2024",
+        "period": "2023.06 — 2024.01",
         "description": "Backend development for real-time collaborative AI data labeling platform",
         "highlights": [
-          "Supported 100 concurrent users with sub-10-second response times",
-          "Implemented real-time collaboration features via WebSocket"
+          "GPU resource management via K8s with Grafana monitoring",
+          "Redis-backed workload-aware scheduler supporting ~100 concurrent users within ~10s"
         ],
         "tech": ["Python", "FastAPI", "WebSocket", "Redis", "Docker", "AWS"]
       },
       {
         "name": "VORY-Q",
-        "period": "2022 — 2023",
+        "period": "2022.05 — 2022.12",
         "description": "Backend development for AI-powered data analysis and visualization platform",
         "highlights": [
-          "Achieved sub-1-second API response times",
-          "Reduced data visualization processing time by 90%"
+          "LRU caching for concurrent collection/recommendation, API response under ~1s",
+          "Daily pre-aggregation reducing visualization latency by 90%"
         ],
         "tech": ["Python", "Django", "Celery", "PostgreSQL", "Redis"]
       },
       {
         "name": "VODA",
-        "period": "2021 — 2022",
+        "period": "2021.05 — 2022.04",
         "description": "Designed and operated backend systems for large-scale news and content search service",
         "highlights": [
-          "Grew monthly page views from 300K to 10M+",
-          "Optimized search engine based on Elasticsearch"
+          "Behavioral data pipeline via API Gateway + SQS, scaling 300K to 10M+ monthly PV",
+          "MSA architecture, visualization processing time reduced by up to 95%"
         ],
         "tech": ["Python", "Django", "Elasticsearch", "AWS", "Nginx", "Jenkins"]
       },
       {
         "name": "AIVORY",
-        "period": "2020 — 2021",
+        "period": "2020.11 — 2023.04",
         "description": "Developed indexing and search systems for AI-powered web search engine",
         "highlights": [
-          "Optimized indexing speed and memory usage",
-          "Built large-scale data crawling and preprocessing pipeline"
+          "Optimized incremental indexing—selective data fetching, post-reference memory cleanup",
+          "Oracle DB indexing support, automated installation scripts"
         ],
         "tech": ["Python", "Elasticsearch", "Docker", "AWS", "Redis"]
       }
@@ -106,11 +107,11 @@
       },
       {
         "name": "Frameworks",
-        "items": ["FastAPI", "Django", "GraphQL"]
+        "items": ["FastAPI", "Django", "GraphQL", "REST"]
       },
       {
         "name": "Infrastructure",
-        "items": ["Docker", "Kubernetes", "Nginx", "Jenkins"]
+        "items": ["Docker", "Kubernetes", "Nginx", "Jenkins", "CI/CD"]
       },
       {
         "name": "Cloud",
@@ -123,6 +124,10 @@
       {
         "name": "Monitoring",
         "items": ["Datadog", "Prometheus", "Grafana"]
+      },
+      {
+        "name": "Testing",
+        "items": ["pytest", "TDD"]
       }
     ]
   },

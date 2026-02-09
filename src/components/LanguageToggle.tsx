@@ -17,17 +17,6 @@ export default function LanguageToggle() {
   return (
     <div className="flex items-center gap-1 text-sm">
       <button
-        onClick={() => switchLocale("ko")}
-        className={`px-2 py-1 rounded transition-colors ${
-          locale === "ko"
-            ? "text-teal bg-teal/10"
-            : "text-slate hover:text-lightest-slate"
-        }`}
-      >
-        한국어
-      </button>
-      <span className="text-slate">|</span>
-      <button
         onClick={() => switchLocale("en")}
         className={`px-2 py-1 rounded transition-colors ${
           locale === "en"
@@ -36,6 +25,17 @@ export default function LanguageToggle() {
         }`}
       >
         EN
+      </button>
+      <span className="text-slate">|</span>
+      <button
+        onClick={() => switchLocale("ko")}
+        className={`px-2 py-1 rounded transition-colors ${
+          locale === "ko"
+            ? "text-teal bg-teal/10"
+            : "text-slate hover:text-lightest-slate"
+        }`}
+      >
+        한국어
       </button>
     </div>
   );

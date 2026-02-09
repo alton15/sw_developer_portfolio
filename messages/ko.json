@@ -12,7 +12,7 @@
   },
   "about": {
     "title": "소개",
-    "description": "파이썬을 주 언어로 사용하는 백엔드 엔지니어입니다. AWS 기반 대규모 트래픽 처리, 데이터 파이프라인 설계, 실시간 이벤트 처리 시스템 구축 경험이 있습니다. 안정적이고 확장 가능한 서비스 아키텍처를 설계하는 것에 관심이 많습니다."
+    "description": "5년차 백엔드 엔지니어로, Python을 주 언어로 사용합니다. AWS 기반 대용량 트래픽 처리, 실시간 데이터 파이프라인 설계, 검색 엔진 최적화 경험이 있습니다. Pub/Sub 아키텍처로 94.8배 성능 개선을 달성하고, 월 30만에서 1,000만+ 페이지뷰까지 서비스를 성장시킨 경험이 있습니다."
   },
   "experience": {
     "title": "경력",
@@ -22,9 +22,10 @@
         "company": "AITRICS",
         "role": "백엔드 엔지니어",
         "description": [
-          "REST API에서 GraphQL로의 마이그레이션을 주도하여 API 효율성 개선",
-          "Pub/Sub 기반 실시간 데이터 파이프라인 구축으로 94.8배 성능 향상 달성",
-          "Datadog을 활용한 모니터링 체계 구축 및 장애 대응 프로세스 확립"
+          "REST API에서 GraphQL로 마이그레이션하여 필요한 데이터만 조회 가능하게 개선, 오버페칭 제거 및 클라이언트 개발 생산성 향상",
+          "Scheduler 기반 배치를 RabbitMQ Pub/Sub 구조로 전환, 환자 단위 이벤트 처리로 평균 94.8배 속도 개선 및 실시간 알림 제공",
+          "Retry/DLQ/Sequence 관리 등 메시지 Failover 전략 구현으로 안정적 메시지 처리 체계 확보",
+          "Datadog 기반 APM 대시보드, 에러율 추적, 서비스 헬스 모니터링 및 온콜 알림 구성"
         ],
         "tech": ["Python", "FastAPI", "GraphQL", "Docker", "RabbitMQ", "Datadog"]
       },
@@ -33,10 +34,10 @@
         "company": "Plan.I",
         "role": "백엔드 엔지니어",
         "description": [
-          "AI Canvas, VORY-Q, VODA, AIVORY 등 다수의 B2B/B2C 서비스 백엔드 개발",
-          "AWS 기반 인프라 설계 및 Docker/Kubernetes 컨테이너 오케스트레이션",
-          "Elasticsearch/OpenSearch 기반 대규모 검색 엔진 최적화",
-          "서비스 트래픽을 월 30만에서 1,000만+ 페이지뷰로 성장시키는 데 기여"
+          "VODA, VORY-Q, AI Canvas, AIVORY 등 다수의 B2B/B2C 서비스 백엔드 설계부터 운영까지 전 과정 담당",
+          "AWS API Gateway + SQS 기반 행동 데이터 수집 파이프라인 구축, 월 30만 → 1,000만+ PV 성장 지원",
+          "Kubernetes 기반 GPU 자원 관리 및 Redis 기반 워크로드 인식 작업 스케줄러 설계",
+          "Elasticsearch 증분 색인 최적화, 데이터 시각화 처리 시간 최대 95% 단축"
         ],
         "tech": ["Python", "Django", "FastAPI", "AWS", "Docker", "Kubernetes", "Redis", "Elasticsearch"]
       }
@@ -50,48 +51,48 @@
         "period": "2024",
         "description": "실시간 바이탈 사인 모니터링 및 AI 예측 시스템의 백엔드 아키텍처 설계",
         "highlights": [
-          "Pub/Sub 기반 실시간 처리로 기존 대비 94.8배 속도 개선",
-          "GraphQL 마이그레이션으로 API 호출 효율성 대폭 향상"
+          "Scheduler 배치를 RabbitMQ Pub/Sub으로 전환, 평균 94.8배 속도 개선",
+          "GraphQL 전환으로 오버페칭 제거, API 추상화"
         ],
         "tech": ["Python", "FastAPI", "GraphQL", "RabbitMQ", "Docker"]
       },
       {
         "name": "AI Canvas",
-        "period": "2023 — 2024",
+        "period": "2023.06 — 2024.01",
         "description": "실시간 협업 기반 AI 데이터 라벨링 플랫폼 백엔드 개발",
         "highlights": [
-          "동시 100명 사용자 지원, 10초 내 응답 보장",
-          "WebSocket 기반 실시간 협업 기능 구현"
+          "K8s GPU 자원 관리 및 Grafana 모니터링",
+          "Redis 기반 워크로드 인식 스케줄러로 동시 100명, 이미지 생성 포함 응답 10초 이내"
         ],
         "tech": ["Python", "FastAPI", "WebSocket", "Redis", "Docker", "AWS"]
       },
       {
         "name": "VORY-Q",
-        "period": "2022 — 2023",
+        "period": "2022.05 — 2022.12",
         "description": "AI 기반 데이터 분석 및 시각화 플랫폼 백엔드 개발",
         "highlights": [
-          "API 응답 시간 1초 이내 달성",
-          "데이터 시각화 처리 시간 90% 단축"
+          "LRU 캐시 도입으로 데이터 수집과 추천 동시 처리 시 API 응답 1초 이내",
+          "일별 사전 집계로 시각화 API 응답 90% 단축"
         ],
         "tech": ["Python", "Django", "Celery", "PostgreSQL", "Redis"]
       },
       {
         "name": "VODA",
-        "period": "2021 — 2022",
+        "period": "2021.05 — 2022.04",
         "description": "대규모 뉴스 및 콘텐츠 검색 서비스의 백엔드 시스템 설계 및 운영",
         "highlights": [
-          "월간 페이지뷰 30만에서 1,000만+ 으로 성장",
-          "Elasticsearch 기반 검색 엔진 최적화"
+          "AWS API Gateway + SQS 기반 마우스 행동 데이터 수집, 월 30만 → 1,000만+ PV 성장",
+          "MSA 아키텍처 및 시각화 처리 시간 최대 95% 단축"
         ],
         "tech": ["Python", "Django", "Elasticsearch", "AWS", "Nginx", "Jenkins"]
       },
       {
         "name": "AIVORY",
-        "period": "2020 — 2021",
+        "period": "2020.11 — 2023.04",
         "description": "AI 기반 웹 검색 엔진의 색인 및 검색 시스템 개발",
         "highlights": [
-          "색인 속도 및 메모리 사용량 최적화",
-          "대규모 데이터 크롤링 및 전처리 파이프라인 구축"
+          "증분 색인 시 비교용 데이터만 조회하도록 최적화, 소요 시간 및 메모리 단축",
+          "Oracle DB 색인 대응, 자동 설치 스크립트 개발"
         ],
         "tech": ["Python", "Elasticsearch", "Docker", "AWS", "Redis"]
       }
@@ -106,11 +107,11 @@
       },
       {
         "name": "Frameworks",
-        "items": ["FastAPI", "Django", "GraphQL"]
+        "items": ["FastAPI", "Django", "GraphQL", "REST"]
       },
       {
         "name": "Infrastructure",
-        "items": ["Docker", "Kubernetes", "Nginx", "Jenkins"]
+        "items": ["Docker", "Kubernetes", "Nginx", "Jenkins", "CI/CD"]
       },
       {
         "name": "Cloud",
@@ -123,6 +124,10 @@
       {
         "name": "Monitoring",
         "items": ["Datadog", "Prometheus", "Grafana"]
+      },
+      {
+        "name": "Testing",
+        "items": ["pytest", "TDD"]
       }
     ]
   },
