@@ -10,9 +10,10 @@ export default function Home() {
     <div className="relative">
       <MouseGradient />
       <div className="mx-auto min-h-screen max-w-screen-xl px-6 py-12 md:px-12 md:py-20 lg:px-24 lg:py-0">
-        <div className="lg:flex lg:justify-between lg:gap-4">
+        <div className="lg:flex lg:gap-12">
           <Header />
-          <main className="pt-24 lg:w-1/2 lg:py-24">
+          <div className="hidden lg:block lg:w-px lg:self-stretch lg:bg-navy-lighter lg:my-24 lg:shrink-0" />
+          <main className="pt-24 lg:w-[55%] lg:py-24">
             <About />
             <Experience />
             <Projects />

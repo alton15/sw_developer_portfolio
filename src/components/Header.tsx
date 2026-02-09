@@ -12,15 +12,23 @@ export default function Header() {
   const [activeSection, setActiveSection] = useState<string>("about");
 
   useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY < 100) {
+        setActiveSection("about");
+        return;
+      }
+    };
+
     const observer = new IntersectionObserver(
       (entries) => {
+        if (window.scrollY < 100) return;
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             setActiveSection(entry.target.id);
           }
         });
       },
-      { rootMargin: "-50% 0px -50% 0px" }
+      { rootMargin: "-30% 0px -50% 0px" }
     );
 
     navItems.forEach((item) => {
@@ -28,7 +36,13 @@ export default function Header() {
       if (el) observer.observe(el);
     });
 
-    return () => observer.disconnect();
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    handleScroll();
+
+    return () => {
+      observer.disconnect();
+      window.removeEventListener("scroll", handleScroll);
+    };
   }, []);
 
   const scrollTo = (id: string) => {
@@ -36,9 +50,9 @@ export default function Header() {
   };
 
   return (
-    <header className="lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-1/2 lg:flex-col lg:justify-between lg:py-24">
+    <header className="lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-[40%] lg:shrink-0 lg:flex-col lg:justify-between lg:py-24">
       <div>
-        <h1 className="text-4xl font-bold tracking-tight text-lightest-slate sm:text-5xl">
+        <h1 className="text-3xl font-bold tracking-tight text-lightest-slate sm:text-4xl">
           {t("header.name")}
         </h1>
         <h2 className="mt-3 text-lg font-medium tracking-tight text-lightest-slate sm:text-xl">
