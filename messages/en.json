@@ -1,0 +1,133 @@
+{
+  "header": {
+    "name": "Kikang Kim",
+    "role": "Backend Engineer",
+    "tagline": "I design stable and scalable service architectures."
+  },
+  "nav": {
+    "about": "About",
+    "experience": "Experience",
+    "projects": "Projects",
+    "skills": "Skills"
+  },
+  "about": {
+    "title": "About",
+    "description": "Backend engineer specializing in Python, with experience in large-scale traffic handling on AWS, data pipeline design, and real-time event processing systems. Passionate about designing stable and scalable service architectures."
+  },
+  "experience": {
+    "title": "Experience",
+    "items": [
+      {
+        "period": "Aug 2024 — Present",
+        "company": "AITRICS",
+        "role": "Backend Engineer",
+        "description": [
+          "Led migration from REST API to GraphQL, improving API efficiency",
+          "Built Pub/Sub-based real-time data pipeline achieving 94.8x performance improvement",
+          "Established monitoring system with Datadog and incident response processes"
+        ],
+        "tech": ["Python", "FastAPI", "GraphQL", "Docker", "RabbitMQ", "Datadog"]
+      },
+      {
+        "period": "Nov 2020 — Aug 2024",
+        "company": "Plan.I",
+        "role": "Backend Engineer",
+        "description": [
+          "Developed backend for multiple B2B/B2C services including AI Canvas, VORY-Q, VODA, and AIVORY",
+          "Designed AWS-based infrastructure with Docker/Kubernetes container orchestration",
+          "Optimized large-scale search engines using Elasticsearch/OpenSearch",
+          "Contributed to growing service traffic from 300K to 10M+ monthly page views"
+        ],
+        "tech": ["Python", "Django", "FastAPI", "AWS", "Docker", "Kubernetes", "Redis", "Elasticsearch"]
+      }
+    ]
+  },
+  "projects": {
+    "title": "Projects",
+    "items": [
+      {
+        "name": "AITRICS-VC",
+        "period": "2024",
+        "description": "Designed backend architecture for real-time vital sign monitoring and AI prediction system",
+        "highlights": [
+          "Achieved 94.8x speed improvement with Pub/Sub-based real-time processing",
+          "Significantly improved API call efficiency through GraphQL migration"
+        ],
+        "tech": ["Python", "FastAPI", "GraphQL", "RabbitMQ", "Docker"]
+      },
+      {
+        "name": "AI Canvas",
+        "period": "2023 — 2024",
+        "description": "Backend development for real-time collaborative AI data labeling platform",
+        "highlights": [
+          "Supported 100 concurrent users with sub-10-second response times",
+          "Implemented real-time collaboration features via WebSocket"
+        ],
+        "tech": ["Python", "FastAPI", "WebSocket", "Redis", "Docker", "AWS"]
+      },
+      {
+        "name": "VORY-Q",
+        "period": "2022 — 2023",
+        "description": "Backend development for AI-powered data analysis and visualization platform",
+        "highlights": [
+          "Achieved sub-1-second API response times",
+          "Reduced data visualization processing time by 90%"
+        ],
+        "tech": ["Python", "Django", "Celery", "PostgreSQL", "Redis"]
+      },
+      {
+        "name": "VODA",
+        "period": "2021 — 2022",
+        "description": "Designed and operated backend systems for large-scale news and content search service",
+        "highlights": [
+          "Grew monthly page views from 300K to 10M+",
+          "Optimized search engine based on Elasticsearch"
+        ],
+        "tech": ["Python", "Django", "Elasticsearch", "AWS", "Nginx", "Jenkins"]
+      },
+      {
+        "name": "AIVORY",
+        "period": "2020 — 2021",
+        "description": "Developed indexing and search systems for AI-powered web search engine",
+        "highlights": [
+          "Optimized indexing speed and memory usage",
+          "Built large-scale data crawling and preprocessing pipeline"
+        ],
+        "tech": ["Python", "Elasticsearch", "Docker", "AWS", "Redis"]
+      }
+    ]
+  },
+  "skills": {
+    "title": "Skills",
+    "categories": [
+      {
+        "name": "Languages",
+        "items": ["Python", "SQL"]
+      },
+      {
+        "name": "Frameworks",
+        "items": ["FastAPI", "Django", "GraphQL"]
+      },
+      {
+        "name": "Infrastructure",
+        "items": ["Docker", "Kubernetes", "Nginx", "Jenkins"]
+      },
+      {
+        "name": "Cloud",
+        "items": ["AWS EC2", "S3", "RDS", "SQS", "API Gateway", "OpenSearch", "Lightsail"]
+      },
+      {
+        "name": "Data",
+        "items": ["PostgreSQL", "Redis", "Elasticsearch", "RabbitMQ", "Celery"]
+      },
+      {
+        "name": "Monitoring",
+        "items": ["Datadog", "Prometheus", "Grafana"]
+      }
+    ]
+  },
+  "language": {
+    "ko": "한국어",
+    "en": "EN"
+  }
+}

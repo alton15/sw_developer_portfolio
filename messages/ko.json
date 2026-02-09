@@ -1,0 +1,133 @@
+{
+  "header": {
+    "name": "김기강",
+    "role": "백엔드 엔지니어",
+    "tagline": "안정적이고 확장 가능한 서비스 아키텍처를 설계합니다."
+  },
+  "nav": {
+    "about": "소개",
+    "experience": "경력",
+    "projects": "프로젝트",
+    "skills": "기술 스택"
+  },
+  "about": {
+    "title": "소개",
+    "description": "파이썬을 주 언어로 사용하는 백엔드 엔지니어입니다. AWS 기반 대규모 트래픽 처리, 데이터 파이프라인 설계, 실시간 이벤트 처리 시스템 구축 경험이 있습니다. 안정적이고 확장 가능한 서비스 아키텍처를 설계하는 것에 관심이 많습니다."
+  },
+  "experience": {
+    "title": "경력",
+    "items": [
+      {
+        "period": "2024.08 — 현재",
+        "company": "AITRICS",
+        "role": "백엔드 엔지니어",
+        "description": [
+          "REST API에서 GraphQL로의 마이그레이션을 주도하여 API 효율성 개선",
+          "Pub/Sub 기반 실시간 데이터 파이프라인 구축으로 94.8배 성능 향상 달성",
+          "Datadog을 활용한 모니터링 체계 구축 및 장애 대응 프로세스 확립"
+        ],
+        "tech": ["Python", "FastAPI", "GraphQL", "Docker", "RabbitMQ", "Datadog"]
+      },
+      {
+        "period": "2020.11 — 2024.08",
+        "company": "Plan.I",
+        "role": "백엔드 엔지니어",
+        "description": [
+          "AI Canvas, VORY-Q, VODA, AIVORY 등 다수의 B2B/B2C 서비스 백엔드 개발",
+          "AWS 기반 인프라 설계 및 Docker/Kubernetes 컨테이너 오케스트레이션",
+          "Elasticsearch/OpenSearch 기반 대규모 검색 엔진 최적화",
+          "서비스 트래픽을 월 30만에서 1,000만+ 페이지뷰로 성장시키는 데 기여"
+        ],
+        "tech": ["Python", "Django", "FastAPI", "AWS", "Docker", "Kubernetes", "Redis", "Elasticsearch"]
+      }
+    ]
+  },
+  "projects": {
+    "title": "프로젝트",
+    "items": [
+      {
+        "name": "AITRICS-VC",
+        "period": "2024",
+        "description": "실시간 바이탈 사인 모니터링 및 AI 예측 시스템의 백엔드 아키텍처 설계",
+        "highlights": [
+          "Pub/Sub 기반 실시간 처리로 기존 대비 94.8배 속도 개선",
+          "GraphQL 마이그레이션으로 API 호출 효율성 대폭 향상"
+        ],
+        "tech": ["Python", "FastAPI", "GraphQL", "RabbitMQ", "Docker"]
+      },
+      {
+        "name": "AI Canvas",
+        "period": "2023 — 2024",
+        "description": "실시간 협업 기반 AI 데이터 라벨링 플랫폼 백엔드 개발",
+        "highlights": [
+          "동시 100명 사용자 지원, 10초 내 응답 보장",
+          "WebSocket 기반 실시간 협업 기능 구현"
+        ],
+        "tech": ["Python", "FastAPI", "WebSocket", "Redis", "Docker", "AWS"]
+      },
+      {
+        "name": "VORY-Q",
+        "period": "2022 — 2023",
+        "description": "AI 기반 데이터 분석 및 시각화 플랫폼 백엔드 개발",
+        "highlights": [
+          "API 응답 시간 1초 이내 달성",
+          "데이터 시각화 처리 시간 90% 단축"
+        ],
+        "tech": ["Python", "Django", "Celery", "PostgreSQL", "Redis"]
+      },
+      {
+        "name": "VODA",
+        "period": "2021 — 2022",
+        "description": "대규모 뉴스 및 콘텐츠 검색 서비스의 백엔드 시스템 설계 및 운영",
+        "highlights": [
+          "월간 페이지뷰 30만에서 1,000만+ 으로 성장",
+          "Elasticsearch 기반 검색 엔진 최적화"
+        ],
+        "tech": ["Python", "Django", "Elasticsearch", "AWS", "Nginx", "Jenkins"]
+      },
+      {
+        "name": "AIVORY",
+        "period": "2020 — 2021",
+        "description": "AI 기반 웹 검색 엔진의 색인 및 검색 시스템 개발",
+        "highlights": [
+          "색인 속도 및 메모리 사용량 최적화",
+          "대규모 데이터 크롤링 및 전처리 파이프라인 구축"
+        ],
+        "tech": ["Python", "Elasticsearch", "Docker", "AWS", "Redis"]
+      }
+    ]
+  },
+  "skills": {
+    "title": "기술 스택",
+    "categories": [
+      {
+        "name": "Languages",
+        "items": ["Python", "SQL"]
+      },
+      {
+        "name": "Frameworks",
+        "items": ["FastAPI", "Django", "GraphQL"]
+      },
+      {
+        "name": "Infrastructure",
+        "items": ["Docker", "Kubernetes", "Nginx", "Jenkins"]
+      },
+      {
+        "name": "Cloud",
+        "items": ["AWS EC2", "S3", "RDS", "SQS", "API Gateway", "OpenSearch", "Lightsail"]
+      },
+      {
+        "name": "Data",
+        "items": ["PostgreSQL", "Redis", "Elasticsearch", "RabbitMQ", "Celery"]
+      },
+      {
+        "name": "Monitoring",
+        "items": ["Datadog", "Prometheus", "Grafana"]
+      }
+    ]
+  },
+  "language": {
+    "ko": "한국어",
+    "en": "EN"
+  }
+}
