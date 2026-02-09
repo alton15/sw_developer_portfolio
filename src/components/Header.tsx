@@ -28,7 +28,7 @@ export default function Header() {
           }
         });
       },
-      { rootMargin: "-30% 0px -50% 0px" }
+      { rootMargin: "-20% 0px -60% 0px" }
     );
 
     navItems.forEach((item) => {
@@ -46,11 +46,12 @@ export default function Header() {
   }, []);
 
   const scrollTo = (id: string) => {
+    setActiveSection(id);
     document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
-    <header className="lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-[40%] lg:shrink-0 lg:flex-col lg:justify-between lg:py-24">
+    <header className="lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-[35%] lg:shrink-0 lg:flex-col lg:justify-between lg:py-24">
       <div>
         <h1 className="text-3xl font-bold tracking-tight text-lightest-slate sm:text-4xl">
           {t("header.name")}
@@ -58,7 +59,7 @@ export default function Header() {
         <h2 className="mt-3 text-lg font-medium tracking-tight text-lightest-slate sm:text-xl">
           {t("header.role")}
         </h2>
-        <p className="mt-4 max-w-xs leading-normal text-slate">
+        <p className="mt-4 leading-normal text-slate">
           {t("header.tagline")}
         </p>
 

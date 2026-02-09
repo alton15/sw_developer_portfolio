@@ -13,10 +13,13 @@ export default function Home() {
         <div className="lg:flex lg:gap-12">
           <Header />
           <div className="hidden lg:block lg:w-px lg:self-stretch lg:bg-navy-lighter lg:my-24 lg:shrink-0" />
-          <main className="pt-24 lg:w-[55%] lg:py-24">
+          <main className="pt-24 lg:flex-1 lg:py-24">
             <About />
+            <hr className="border-navy-lighter mb-16 lg:mb-24" />
             <Experience />
+            <hr className="border-navy-lighter mb-16 lg:mb-24" />
             <Projects />
+            <hr className="border-navy-lighter mb-16 lg:mb-24" />
             <Skills />
           </main>
         </div>
