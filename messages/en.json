@@ -48,23 +48,13 @@
     "title": "Projects",
     "items": [
       {
-        "name": "On-Call Bot",
-        "period": "2025",
-        "description": "Slack-based AI agent on-call bot — automatically analyzes service codebase to diagnose incidents and suggest resolutions",
-        "highlights": [
-          "Built 4-stage AI agent pipeline (context gathering → code analysis → diagnosis → response) for structured incident analysis",
-          "Integrated Jira/Confluence for automatic context collection, Git worktree-based version-specific code analysis",
-          "Improved team on-call efficiency by 20% — standardized incident response with AI, reducing dependency on individual code familiarity"
-        ],
-        "tech": ["TypeScript", "Node.js", "Slack Bolt", "Claude AI", "Jira", "Confluence"]
-      },
-      {
         "name": "AITRICS-VC",
-        "period": "2024",
+        "period": "Aug 2024 — Present",
         "description": "Designed backend architecture for real-time vital sign monitoring and AI prediction system",
         "highlights": [
           "Redesigned batch pipeline to event-driven Pub/Sub, achieving 94.8x throughput improvement",
-          "GraphQL migration eliminating over-fetching and improving API abstraction"
+          "GraphQL migration eliminating over-fetching and improving API abstraction",
+          "Built AI agent-powered on-call bot — automated incident analysis via Slack, improving team on-call efficiency by 20%"
         ],
         "tech": ["Python", "FastAPI", "GraphQL", "RabbitMQ", "Docker"]
       },
