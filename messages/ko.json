@@ -25,7 +25,8 @@
           "REST API에서 GraphQL로 마이그레이션하여 필요한 데이터만 조회 가능하게 개선, 오버페칭 제거 및 클라이언트 개발 생산성 향상",
           "Scheduler 기반 배치를 RabbitMQ Pub/Sub 구조로 전환, 환자 단위 이벤트 처리로 평균 94.8배 속도 개선 및 실시간 알림 제공",
           "Retry/DLQ/Sequence 관리 등 메시지 Failover 전략 구현으로 안정적 메시지 처리 체계 확보",
-          "Datadog 기반 APM 대시보드, 에러율 추적, 서비스 헬스 모니터링 및 온콜 알림 구성"
+          "Datadog 기반 APM 대시보드, 에러율 추적, 서비스 헬스 모니터링 및 온콜 알림 구성",
+          "AI 에이전트 기반 온콜 봇 개발 — Slack에서 장애 질문 시 코드베이스를 자동 분석하여 원인 진단, 팀 온콜 업무 효율 20% 향상"
         ],
         "tech": ["Python", "FastAPI", "GraphQL", "Docker", "RabbitMQ", "Datadog"]
       },
@@ -46,6 +47,17 @@
   "projects": {
     "title": "프로젝트",
     "items": [
+      {
+        "name": "On-Call Bot",
+        "period": "2025",
+        "description": "Slack 기반 AI 에이전트 온콜 봇 — 장애 접수 시 서비스 코드베이스를 자동 분석하여 원인 진단 및 해결 방향 제시",
+        "highlights": [
+          "4단계 AI 에이전트 파이프라인(맥락 수집 → 코드 분석 → 원인 진단 → 응답 생성)으로 구조화된 장애 분석 자동화",
+          "Jira/Confluence 연동으로 이슈 맥락 자동 수집, Git 워크트리 기반 버전별 코드 분석 지원",
+          "팀 온콜 업무 효율 20% 향상 — 코드 숙련도에 의존하던 장애 대응을 AI로 표준화"
+        ],
+        "tech": ["TypeScript", "Node.js", "Slack Bolt", "Claude AI", "Jira", "Confluence"]
+      },
       {
         "name": "AITRICS-VC",
         "period": "2024",

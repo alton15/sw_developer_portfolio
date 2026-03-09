@@ -25,7 +25,8 @@
           "Migrated REST API to GraphQL, enabling precise data fetching, eliminating over-fetching, and improving client development productivity",
           "Redesigned scheduler-based batch processing to RabbitMQ Pub/Sub architecture, achieving 94.8x average throughput improvement with per-patient event processing and real-time alerts",
           "Implemented message failover strategies including Retry, DLQ, and Sequence management for reliable message processing",
-          "Built Datadog-based APM dashboards, error rate tracking, service health monitoring, and on-call alerting"
+          "Built Datadog-based APM dashboards, error rate tracking, service health monitoring, and on-call alerting",
+          "Developed AI agent-powered on-call bot — automated codebase analysis for incident diagnosis via Slack, improving team on-call efficiency by 20%"
         ],
         "tech": ["Python", "FastAPI", "GraphQL", "Docker", "RabbitMQ", "Datadog"]
       },
@@ -46,6 +47,17 @@
   "projects": {
     "title": "Projects",
     "items": [
+      {
+        "name": "On-Call Bot",
+        "period": "2025",
+        "description": "Slack-based AI agent on-call bot — automatically analyzes service codebase to diagnose incidents and suggest resolutions",
+        "highlights": [
+          "Built 4-stage AI agent pipeline (context gathering → code analysis → diagnosis → response) for structured incident analysis",
+          "Integrated Jira/Confluence for automatic context collection, Git worktree-based version-specific code analysis",
+          "Improved team on-call efficiency by 20% — standardized incident response with AI, reducing dependency on individual code familiarity"
+        ],
+        "tech": ["TypeScript", "Node.js", "Slack Bolt", "Claude AI", "Jira", "Confluence"]
+      },
       {
         "name": "AITRICS-VC",
         "period": "2024",
