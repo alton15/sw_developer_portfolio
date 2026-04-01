@@ -4,13 +4,14 @@ import { useTranslations } from "next-intl";
 
 export default function Experience() {
   const t = useTranslations("experience");
-  const items = t.raw("items") as Array<{
+  const items = (t.raw("items") as Array<{
     period: string;
     company: string;
     role: string;
     description: string[];
+    projects?: Array<{ name: string; description: string }>;
     tech: string[];
-  }>;
+  }>) ?? [];
 
   return (
     <section id="experience" className="mb-16 scroll-mt-16 lg:mb-24 lg:scroll-mt-24">
@@ -21,8 +22,8 @@ export default function Experience() {
       </div>
       <div>
         <ol className="group/list">
-          {items.map((item, index) => (
-            <li key={index} className="mb-12">
+          {items.map((item) => (
+            <li key={item.company} className="mb-12">
               <div className="group relative grid pb-1 transition-all sm:grid-cols-8 sm:gap-8 md:gap-4 lg:hover:!opacity-100 lg:group-hover/list:opacity-50">
                 <div className="absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-md transition motion-reduce:transition-none lg:-inset-x-6 lg:block lg:group-hover:bg-navy-light/50 lg:group-hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] lg:group-hover:drop-shadow-lg" />
                 <header className="z-10 mb-2 mt-1 text-xs font-semibold uppercase tracking-wide text-slate sm:col-span-2">
@@ -42,6 +43,17 @@ export default function Experience() {
                       </li>
                     ))}
                   </ul>
+                  {item.projects && item.projects.length > 0 && (
+                    <div className="mt-3 flex flex-wrap gap-x-4 gap-y-1 text-xs text-light-slate">
+                      {item.projects.map((project) => (
+                        <span key={project.name} className="inline-flex items-center gap-1">
+                          <span className="text-teal">▸</span>
+                          <span className="font-medium text-lightest-slate">{project.name}</span>
+                          <span className="text-slate">— {project.description}</span>
+                        </span>
+                      ))}
+                    </div>
+                  )}
                   <ul className="mt-2 flex flex-wrap gap-2" aria-label="Technologies used">
                     {item.tech.map((tech) => (
                       <li key={tech}>

@@ -7,7 +7,7 @@
   "nav": {
     "about": "소개",
     "experience": "경력",
-    "projects": "프로젝트",
+    "projects": "사이드 프로젝트",
     "skills": "기술 스택"
   },
   "about": {
@@ -28,6 +28,12 @@
           "Datadog 기반 APM 대시보드, 에러율 추적, 서비스 헬스 모니터링 및 온콜 알림 구성",
           "AI 에이전트 기반 온콜 봇 개발 — Slack에서 장애 질문 시 코드베이스를 자동 분석하여 원인 진단, 팀 온콜 업무 효율 20% 향상"
         ],
+        "projects": [
+          {
+            "name": "AITRICS-VC",
+            "description": "실시간 바이탈 사인 모니터링 및 AI 예측 시스템"
+          }
+        ],
         "tech": ["Python", "FastAPI", "GraphQL", "Docker", "RabbitMQ", "Datadog"]
       },
       {
@@ -40,63 +46,64 @@
           "Kubernetes 기반 GPU 자원 관리 및 Redis 기반 워크로드 인식 작업 스케줄러 설계",
           "Elasticsearch 증분 색인 최적화, 데이터 시각화 처리 시간 최대 95% 단축"
         ],
+        "projects": [
+          {
+            "name": "VODA",
+            "description": "대규모 뉴스 및 콘텐츠 검색 서비스"
+          },
+          {
+            "name": "VORY-Q",
+            "description": "AI 기반 데이터 분석 및 시각화 플랫폼"
+          },
+          {
+            "name": "AI Canvas",
+            "description": "실시간 협업 기반 AI 데이터 라벨링 플랫폼"
+          },
+          {
+            "name": "AIVORY",
+            "description": "AI 기반 웹 검색 엔진"
+          }
+        ],
         "tech": ["Python", "Django", "FastAPI", "AWS", "Docker", "Kubernetes", "Redis", "Elasticsearch"]
       }
     ]
   },
   "projects": {
-    "title": "프로젝트",
+    "title": "사이드 프로젝트",
     "items": [
       {
-        "name": "AITRICS-VC",
-        "period": "2024.08 — 현재",
-        "description": "실시간 바이탈 사인 모니터링 및 AI 예측 시스템의 백엔드 아키텍처 설계",
+        "name": "recsys-pipeline",
+        "description": "5천만 DAU 커머스 서비스를 위한 프로덕션급 추천 파이프라인 — 4-Plane 아키텍처와 3-Tier 서빙, docker-compose로 로컬 실행, Kubernetes로 500K RPS 스케일링",
         "highlights": [
-          "Scheduler 배치를 RabbitMQ Pub/Sub으로 전환, 평균 94.8배 속도 개선",
-          "GraphQL 전환으로 오버페칭 제거, API 추상화",
-          "AI 에이전트 기반 온콜 봇 개발 — Slack에서 장애 자동 분석, 팀 온콜 업무 효율 20% 향상"
+          "3단계 서빙: Two-Tower 후보 생성 → 세션 기반 리랭킹 → DCN-V2 GPU 스코어링",
+          "4-Plane 아키텍처 (Data/Stream/Batch/Control) — Envoy, Flink, PySpark, Airflow 구성",
+          "Cloud-agnostic: 로컬은 docker-compose up 한 줄, 프로덕션은 Kubernetes 매니페스트"
         ],
-        "tech": ["Python", "FastAPI", "GraphQL", "RabbitMQ", "Docker"]
+        "tech": ["Go", "Envoy", "Apache Flink", "Redpanda", "DragonflyDB", "Milvus", "PySpark", "Docker"],
+        "github": "https://github.com/alton15/recsys-pipeline"
       },
       {
-        "name": "AI Canvas",
-        "period": "2023.06 — 2024.01",
-        "description": "실시간 협업 기반 AI 데이터 라벨링 플랫폼 백엔드 개발",
+        "name": "binance-futures-bot",
+        "description": "바이낸스 선물 자동매매 봇 — 기술적 지표 알고리즘 기반, 멀티 에이전트 트레이딩 펌 패턴 적용, AI/LLM 없이 동작",
         "highlights": [
-          "K8s GPU 자원 관리 및 Grafana 모니터링",
-          "Redis 기반 워크로드 인식 스케줄러로 동시 100명, 이미지 생성 포함 응답 10초 이내"
+          "8개 지표 가중 투표 (RSI, MACD, BB, EMA, ATR, ADX, Stochastic) + 프로필별 시그널 품질 필터",
+          "10단계 리스크 관리: 마진 노출 한도, 일일 손실 제한, 드로다운 차단",
+          "적대적 시그널 검증, BM25 상황 메모리, 트레이드 후 리플렉션 시스템",
+          "4가지 트레이딩 프로필 (보수/중립/공격/스캘핑) + 동적 레버리지 조정"
         ],
-        "tech": ["Python", "FastAPI", "WebSocket", "Redis", "Docker", "AWS"]
+        "tech": ["Python", "ccxt", "pandas-ta", "APScheduler", "Docker"],
+        "github": "https://github.com/alton15/binance-futures-bot"
       },
       {
-        "name": "VORY-Q",
-        "period": "2022.05 — 2022.12",
-        "description": "AI 기반 데이터 분석 및 시각화 플랫폼 백엔드 개발",
+        "name": "auto-card-news",
+        "description": "RSS에서 Threads 카드뉴스까지 자동화 파이프라인 — 뉴스 수집, 6장 캐러셀 카드 PNG 생성, Graph API로 발행",
         "highlights": [
-          "LRU 캐시 도입으로 데이터 수집과 추천 동시 처리 시 API 응답 1초 이내",
-          "일별 사전 집계로 시각화 API 응답 90% 단축"
+          "전체 파이프라인: RSS 수집 → Playwright 스크래핑 → AI 요약 → HTML/CSS 카드 렌더링 → Threads 발행",
+          "frozen dataclass 기반 불변 모델, URL 중복 제거 + 발행 이력 추적",
+          "Cloudinary 이미지 호스팅 및 자동 정리, APScheduler 기반 주기 실행"
         ],
-        "tech": ["Python", "Django", "Celery", "PostgreSQL", "Redis"]
-      },
-      {
-        "name": "VODA",
-        "period": "2021.05 — 2022.04",
-        "description": "대규모 뉴스 및 콘텐츠 검색 서비스의 백엔드 시스템 설계 및 운영",
-        "highlights": [
-          "AWS API Gateway + SQS 기반 마우스 행동 데이터 수집, 월 30만 → 1,000만+ PV 성장",
-          "MSA 아키텍처 및 시각화 처리 시간 최대 95% 단축"
-        ],
-        "tech": ["Python", "Django", "Elasticsearch", "AWS", "Nginx", "Jenkins"]
-      },
-      {
-        "name": "AIVORY",
-        "period": "2020.11 — 2023.04",
-        "description": "AI 기반 웹 검색 엔진의 색인 및 검색 시스템 개발",
-        "highlights": [
-          "증분 색인 시 비교용 데이터만 조회하도록 최적화, 소요 시간 및 메모리 단축",
-          "Oracle DB 색인 대응, 자동 설치 스크립트 개발"
-        ],
-        "tech": ["Python", "Elasticsearch", "Docker", "AWS", "Redis"]
+        "tech": ["Python", "Playwright", "Jinja2", "Cloudinary", "Threads API"],
+        "github": "https://github.com/alton15/auto-card-news-ver2"
       }
     ]
   },

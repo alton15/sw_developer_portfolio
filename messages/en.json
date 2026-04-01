@@ -7,7 +7,7 @@
   "nav": {
     "about": "About",
     "experience": "Experience",
-    "projects": "Projects",
+    "projects": "Side Projects",
     "skills": "Skills"
   },
   "about": {
@@ -28,6 +28,12 @@
           "Built Datadog-based APM dashboards, error rate tracking, service health monitoring, and on-call alerting",
           "Developed AI agent-powered on-call bot — automated codebase analysis for incident diagnosis via Slack, improving team on-call efficiency by 20%"
         ],
+        "projects": [
+          {
+            "name": "AITRICS-VC",
+            "description": "Real-time vital sign monitoring and AI prediction system"
+          }
+        ],
         "tech": ["Python", "FastAPI", "GraphQL", "Docker", "RabbitMQ", "Datadog"]
       },
       {
@@ -40,63 +46,64 @@
           "Managed GPU resources on Kubernetes and designed a Redis-backed workload-aware job scheduler",
           "Optimized Elasticsearch incremental indexing, reducing data visualization processing time by up to 95%"
         ],
+        "projects": [
+          {
+            "name": "VODA",
+            "description": "Large-scale news and content search service"
+          },
+          {
+            "name": "VORY-Q",
+            "description": "AI-powered data analysis and visualization platform"
+          },
+          {
+            "name": "AI Canvas",
+            "description": "Real-time collaborative AI data labeling platform"
+          },
+          {
+            "name": "AIVORY",
+            "description": "AI-powered web search engine"
+          }
+        ],
         "tech": ["Python", "Django", "FastAPI", "AWS", "Docker", "Kubernetes", "Redis", "Elasticsearch"]
       }
     ]
   },
   "projects": {
-    "title": "Projects",
+    "title": "Side Projects",
     "items": [
       {
-        "name": "AITRICS-VC",
-        "period": "Aug 2024 — Present",
-        "description": "Designed backend architecture for real-time vital sign monitoring and AI prediction system",
+        "name": "recsys-pipeline",
+        "description": "Production-grade recommendation pipeline for 50M DAU commerce — 4-Plane architecture with 3-Tier serving, runs locally with docker-compose, scales to 500K RPS on Kubernetes",
         "highlights": [
-          "Redesigned batch pipeline to event-driven Pub/Sub, achieving 94.8x throughput improvement",
-          "GraphQL migration eliminating over-fetching and improving API abstraction",
-          "Built AI agent-powered on-call bot — automated incident analysis via Slack, improving team on-call efficiency by 20%"
+          "3-stage serving: Two-Tower candidate generation → session-aware re-ranking → DCN-V2 GPU scoring",
+          "4-Plane architecture (Data/Stream/Batch/Control) with Envoy, Flink, PySpark, and Airflow",
+          "Cloud-agnostic: single docker-compose up for local development, Kubernetes manifests for production"
         ],
-        "tech": ["Python", "FastAPI", "GraphQL", "RabbitMQ", "Docker"]
+        "tech": ["Go", "Envoy", "Apache Flink", "Redpanda", "DragonflyDB", "Milvus", "PySpark", "Docker"],
+        "github": "https://github.com/alton15/recsys-pipeline"
       },
       {
-        "name": "AI Canvas",
-        "period": "2023.06 — 2024.01",
-        "description": "Backend development for real-time collaborative AI data labeling platform",
+        "name": "binance-futures-bot",
+        "description": "Automated Binance futures trading bot — technical indicator algorithms with multi-agent trading firm patterns, no AI/LLM required",
         "highlights": [
-          "GPU resource management via K8s with Grafana monitoring",
-          "Redis-backed workload-aware scheduler supporting ~100 concurrent users within ~10s"
+          "8-indicator weighted voting (RSI, MACD, BB, EMA, ATR, ADX, Stochastic) with per-profile signal quality filters",
+          "10-gate risk management: margin exposure limits, daily loss caps, drawdown blocking",
+          "Adversarial signal validation, BM25 situation memory, and post-trade reflection system",
+          "4 trading profiles (Conservative/Neutral/Aggressive/Scalp) with dynamic leverage adjustment"
         ],
-        "tech": ["Python", "FastAPI", "WebSocket", "Redis", "Docker", "AWS"]
+        "tech": ["Python", "ccxt", "pandas-ta", "APScheduler", "Docker"],
+        "github": "https://github.com/alton15/binance-futures-bot"
       },
       {
-        "name": "VORY-Q",
-        "period": "2022.05 — 2022.12",
-        "description": "Backend development for AI-powered data analysis and visualization platform",
+        "name": "auto-card-news",
+        "description": "Automated RSS-to-Threads card news pipeline — fetches news, generates 6-card carousel PNGs, and publishes via Graph API",
         "highlights": [
-          "LRU caching for concurrent collection/recommendation, API response under ~1s",
-          "Daily pre-aggregation reducing visualization latency by 90%"
+          "End-to-end pipeline: RSS fetch → Playwright scraping → AI summarization → HTML/CSS card rendering → Threads publish",
+          "Immutable frozen dataclass models, URL dedup + publish history for duplicate prevention",
+          "Cloudinary image hosting with automatic cleanup, APScheduler-based periodic execution"
         ],
-        "tech": ["Python", "Django", "Celery", "PostgreSQL", "Redis"]
-      },
-      {
-        "name": "VODA",
-        "period": "2021.05 — 2022.04",
-        "description": "Designed and operated backend systems for large-scale news and content search service",
-        "highlights": [
-          "Behavioral data pipeline via API Gateway + SQS, scaling 300K to 10M+ monthly PV",
-          "MSA architecture, visualization processing time reduced by up to 95%"
-        ],
-        "tech": ["Python", "Django", "Elasticsearch", "AWS", "Nginx", "Jenkins"]
-      },
-      {
-        "name": "AIVORY",
-        "period": "2020.11 — 2023.04",
-        "description": "Developed indexing and search systems for AI-powered web search engine",
-        "highlights": [
-          "Optimized incremental indexing—selective data fetching, post-reference memory cleanup",
-          "Oracle DB indexing support, automated installation scripts"
-        ],
-        "tech": ["Python", "Elasticsearch", "Docker", "AWS", "Redis"]
+        "tech": ["Python", "Playwright", "Jinja2", "Cloudinary", "Threads API"],
+        "github": "https://github.com/alton15/auto-card-news-ver2"
       }
     ]
   },

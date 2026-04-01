@@ -1,16 +1,17 @@
 "use client";
 
 import { useTranslations } from "next-intl";
+import { ExternalLink } from "lucide-react";
 
 export default function Projects() {
   const t = useTranslations("projects");
-  const items = t.raw("items") as Array<{
+  const items = (t.raw("items") as Array<{
     name: string;
-    period: string;
     description: string;
     highlights: string[];
     tech: string[];
-  }>;
+    github?: string;
+  }>) ?? [];
 
   return (
     <section id="projects" className="mb-16 scroll-mt-16 lg:mb-24 lg:scroll-mt-24">
@@ -21,18 +22,27 @@ export default function Projects() {
       </div>
       <div>
         <ul className="group/list">
-          {items.map((item, index) => (
-            <li key={index} className="mb-12">
+          {items.map((item) => (
+            <li key={item.name} className="mb-12">
               <div className="group relative grid pb-1 transition-all sm:grid-cols-8 sm:gap-8 md:gap-4 lg:hover:!opacity-100 lg:group-hover/list:opacity-50">
                 <div className="absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-md transition motion-reduce:transition-none lg:-inset-x-6 lg:block lg:group-hover:bg-navy-light/50 lg:group-hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] lg:group-hover:drop-shadow-lg" />
-                <header className="z-10 mb-2 mt-1 text-xs font-semibold uppercase tracking-wide text-slate sm:col-span-2">
-                  {item.period}
-                </header>
-                <div className="z-10 sm:col-span-6">
+                <div className="z-10 sm:col-span-8">
                   <h3 className="font-medium leading-snug text-lightest-slate">
-                    <span className="inline-flex items-baseline font-medium leading-tight text-lightest-slate group-hover:text-teal transition-colors text-base">
-                      {item.name}
-                    </span>
+                    {item.github ? (
+                      <a
+                        href={item.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-1.5 font-medium leading-tight text-lightest-slate group-hover:text-teal transition-colors text-base"
+                      >
+                        {item.name}
+                        <ExternalLink className="h-3.5 w-3.5 shrink-0" aria-hidden="true" />
+                      </a>
+                    ) : (
+                      <span className="inline-flex items-baseline font-medium leading-tight text-lightest-slate group-hover:text-teal transition-colors text-base">
+                        {item.name}
+                      </span>
+                    )}
                   </h3>
                   <p className="mt-2 text-sm leading-normal text-slate">
                     {item.description}
