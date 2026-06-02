@@ -2,17 +2,19 @@
   "header": {
     "name": "Kikang Kim",
     "role": "Backend Engineer",
-    "tagline": "I design stable and scalable service architectures."
+    "tagline": "I design stable and scalable service architectures.",
+    "location": "Seoul, South Korea · Open to relocation"
   },
   "nav": {
     "about": "About",
     "experience": "Experience",
     "projects": "Side Projects",
-    "skills": "Skills"
+    "skills": "Skills",
+    "education": "Education"
   },
   "about": {
     "title": "About",
-    "description": "Backend engineer with 5+ years of experience, specializing in Python. Experienced in large-scale traffic handling on AWS, real-time data pipeline design, and search engine optimization. Achieved 94.8x throughput improvement through Pub/Sub architecture and contributed to growing a service from 300K to 10M+ monthly page views."
+    "description": "Backend engineer with 5+ years building event-driven systems and data pipelines, primarily in healthcare and B2B SaaS. Redesigned a clinical data pipeline for 94.8x throughput gain and grew a web analytics platform from 300K to 10M+ monthly pageviews."
   },
   "experience": {
     "title": "Experience",
@@ -20,13 +22,17 @@
       {
         "period": "Aug 2024 — Present",
         "company": "AITRICS",
+        "subtitle": "Series C AI healthcare startup — clinical decision support systems",
         "role": "Backend Engineer",
         "description": [
-          "Migrated REST API to GraphQL, enabling precise data fetching, eliminating over-fetching, and improving client development productivity",
-          "Redesigned scheduler-based batch processing to RabbitMQ Pub/Sub architecture, achieving 94.8x average throughput improvement with per-patient event processing and real-time alerts",
-          "Implemented message failover strategies including Retry, DLQ, and Sequence management for reliable message processing",
-          "Built Datadog-based APM dashboards, error rate tracking, service health monitoring, and on-call alerting",
-          "Developed AI agent-powered on-call bot — automated codebase analysis for incident diagnosis via Slack, improving team on-call efficiency by 20%"
+          "REST → GraphQL migration with Strawberry + DataLoader, eliminating N+1 and over-fetching while improving client development velocity",
+          "Replaced scheduler-based batches with RabbitMQ Pub/Sub per-patient event flow, delivering 94.8x average throughput and real-time alerts",
+          "Built Retry/DLQ/Sequence + idempotency-key handling for zero-message-loss processing",
+          "Designed Scoring Manager pipeline — fused AI model predictions with patient chart context to surface clinical decision support data",
+          "Reworked JWT auth — single-active-token, bcrypt hashing, role-based permissions, AES-encrypted audit log, lockout policy",
+          "Enforced exclusive locking on patient status history and a minor-patient deletion policy for data integrity and privacy compliance",
+          "Tracked P50/P95/P99 with Datadog APM + Sentry, wired error-rate, service-health, and on-call alerting",
+          "Built an AI-agent on-call bot — 117 requests from 21 engineers over 10 weeks, 85.5% resolution rate, 2.6× MoM growth, 20% team MTTR reduction"
         ],
         "projects": [
           {
@@ -34,37 +40,39 @@
             "description": "Real-time vital sign monitoring and AI prediction system"
           }
         ],
-        "tech": ["Python", "FastAPI", "GraphQL", "Docker", "RabbitMQ", "Datadog"]
+        "tech": ["Python", "FastAPI", "GraphQL", "Docker", "RabbitMQ", "Datadog", "Sentry", "Claude Code SDK"]
       },
       {
         "period": "Nov 2020 — Aug 2024",
         "company": "Plan.I",
         "role": "Backend Engineer",
         "description": [
-          "Owned end-to-end backend design and operations for multiple B2B/B2C services including VODA, VORY-Q, AI Canvas, and AIVORY",
-          "Built behavioral data collection pipeline using AWS API Gateway + SQS, supporting growth from 300K to 10M+ monthly PV",
-          "Managed GPU resources on Kubernetes and designed a Redis-backed workload-aware job scheduler",
-          "Optimized Elasticsearch incremental indexing, reducing data visualization processing time by up to 95%"
+          "Owned end-to-end backend design and operations across VODA, VORY-Q, AI Canvas, and AIVORY (B2B/B2C)",
+          "Built VODA's behavioral data collection pipeline on AWS API Gateway + SQS, supporting growth from 300K to 10M+ monthly PV",
+          "Migrated VODA's ingestion pipeline from SQS to on-prem Kafka, cutting infra cost and unlocking higher throughput and replay flexibility",
+          "Cut VORY-Q recommendation P95 latency by 90% with LRU caching on hot response paths",
+          "Shipped AIVORY enterprise search — Oracle DB integration plus an automated deployment pipeline that shortened enterprise/government onboarding",
+          "Ran Kubernetes GPU resources with a Redis workload-aware scheduler, and optimized Elasticsearch incremental indexing to cut visualization time by up to 95%"
         ],
         "projects": [
           {
             "name": "VODA",
-            "description": "Large-scale news and content search service"
+            "description": "Web analytics platform — user behavior collection and analysis"
           },
           {
             "name": "VORY-Q",
-            "description": "AI-powered data analysis and visualization platform"
+            "description": "Personalization & recommendation engine"
           },
           {
             "name": "AI Canvas",
-            "description": "Real-time collaborative AI data labeling platform"
+            "description": "AI image generation platform"
           },
           {
             "name": "AIVORY",
-            "description": "AI-powered web search engine"
+            "description": "Enterprise / government search engine solution"
           }
         ],
-        "tech": ["Python", "Django", "FastAPI", "AWS", "Docker", "Kubernetes", "Redis", "Elasticsearch"]
+        "tech": ["Python", "Django", "FastAPI", "AWS", "Kafka", "SQS", "API Gateway", "Docker", "Kubernetes", "Redis", "Elasticsearch", "Oracle"]
       }
     ]
   },
@@ -141,15 +149,30 @@
       },
       {
         "name": "Data",
-        "items": ["PostgreSQL", "Redis", "Elasticsearch", "RabbitMQ", "Celery"]
+        "items": ["Redis", "Elasticsearch", "RabbitMQ", "Kafka", "Celery"]
       },
       {
         "name": "Monitoring",
-        "items": ["Datadog", "Prometheus", "Grafana"]
+        "items": ["Datadog", "Sentry", "Prometheus", "Grafana"]
+      },
+      {
+        "name": "AI-Assisted Engineering",
+        "items": ["Claude Code SDK", "MCP", "Multi-agent Orchestration", "Eval-driven Iteration"]
       },
       {
         "name": "Testing",
         "items": ["pytest", "TDD"]
+      }
+    ]
+  },
+  "education": {
+    "title": "Education",
+    "items": [
+      {
+        "period": "Sep 2022 — Feb 2026",
+        "school": "Korea Cyber University",
+        "degree": "B.S. in Computer Science and Engineering",
+        "details": "Completed while working full-time (expected graduation Feb 2026)"
       }
     ]
   },
