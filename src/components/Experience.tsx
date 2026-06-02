@@ -7,6 +7,7 @@ export default function Experience() {
   const items = (t.raw("items") as Array<{
     period: string;
     company: string;
+    subtitle?: string;
     role: string;
     description: string[];
     projects?: Array<{ name: string; description: string }>;
@@ -35,6 +36,9 @@ export default function Experience() {
                       {item.role} · {item.company}
                     </span>
                   </h3>
+                  {item.subtitle ? (
+                    <p className="mt-1 text-xs text-light-slate">{item.subtitle}</p>
+                  ) : null}
                   <ul className="mt-2 text-sm leading-normal text-slate">
                     {item.description.map((desc, i) => (
                       <li key={i} className="flex gap-2 mb-1">

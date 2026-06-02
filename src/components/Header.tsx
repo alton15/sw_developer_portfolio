@@ -5,7 +5,7 @@ import { Github, Linkedin, Mail } from "lucide-react";
 import LanguageToggle from "./LanguageToggle";
 import { useState, useEffect, useRef } from "react";
 
-const navItems = ["about", "experience", "projects", "skills"] as const;
+const navItems = ["about", "experience", "projects", "skills", "education"] as const;
 
 export default function Header() {
   const t = useTranslations();
@@ -82,6 +82,9 @@ export default function Header() {
         </h2>
         <p className="mt-4 leading-normal text-slate">
           {t("header.tagline")}
+        </p>
+        <p className="mt-2 text-sm leading-normal text-light-slate">
+          {t("header.location")}
         </p>
 
         <nav className="nav hidden lg:block mt-16">

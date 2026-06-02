@@ -3,6 +3,7 @@ import About from "@/components/About";
 import Experience from "@/components/Experience";
 import Projects from "@/components/Projects";
 import Skills from "@/components/Skills";
+import Education from "@/components/Education";
 import MouseGradient from "@/components/MouseGradient";
 
 export default function Home() {
@@ -21,6 +22,8 @@ export default function Home() {
             <Projects />
             <hr className="border-navy-lighter mb-16 lg:mb-24" />
             <Skills />
+            <hr className="border-navy-lighter mb-16 lg:mb-24" />
+            <Education />
           </main>
         </div>
       </div>
