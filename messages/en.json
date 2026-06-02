@@ -72,6 +72,18 @@
     "title": "Side Projects",
     "items": [
       {
+        "name": "komaps",
+        "description": "Trilingual SEO hub for international K-pop and K-drama fans planning pilgrimage trips to Korea — filming locations, idol cafés, and neighborhood guides in English, Japanese, and Simplified Chinese",
+        "highlights": [
+          "Interactive discovery map with MapLibre GL + OpenFreeMap tiles — zero tile-vendor cost",
+          "Single-runtime architecture: Next.js 16 RSC + Drizzle on Vercel Fluid Compute, no separate backend service",
+          "Cloudflare R2 + Sharp image pipeline, DB-backed sitemap with ISR plus secret-protected on-demand revalidate",
+          "HMAC cookie admin sessions, many-to-many mapping across locations, dramas, and idols"
+        ],
+        "tech": ["Next.js 16", "React 19", "TypeScript", "Drizzle", "Supabase", "Cloudflare R2", "MapLibre GL", "Vercel"],
+        "url": "https://komaps.app"
+      },
+      {
         "name": "recsys-pipeline",
         "description": "Production-grade recommendation pipeline for 50M DAU commerce — 4-Plane architecture with 3-Tier serving, runs locally with docker-compose, scales to 500K RPS on Kubernetes",
         "highlights": [
@@ -83,16 +95,16 @@
         "github": "https://github.com/alton15/recsys-pipeline"
       },
       {
-        "name": "binance-futures-bot",
-        "description": "Automated Binance futures trading bot — technical indicator algorithms with multi-agent trading firm patterns, no AI/LLM required",
+        "name": "LoL Spell Checker",
+        "description": "League of Legends enemy summoner spell cooldown tracker — zero-dependency single-file HTML deployed to Cloudflare Pages",
         "highlights": [
-          "8-indicator weighted voting (RSI, MACD, BB, EMA, ATR, ADX, Stochastic) with per-profile signal quality filters",
-          "10-gate risk management: margin exposure limits, daily loss caps, drawdown blocking",
-          "Adversarial signal validation, BM25 situation memory, and post-trade reflection system",
-          "4 trading profiles (Conservative/Neutral/Aggressive/Scalp) with dynamic leverage adjustment"
+          "Track 5 enemy champions (Top/JG/Mid/AD/Sup) with 3 spell slots each (180s/240s/Flash)",
+          "Cooldown reduction toggles: Cosmic Insight (+18 haste), Ionian Boots (+10 haste) auto-applied",
+          "Real-time countdown + ETA display, game timer, EN/KR language toggle"
         ],
-        "tech": ["Python", "ccxt", "pandas-ta", "APScheduler", "Docker"],
-        "github": "https://github.com/alton15/binance-futures-bot"
+        "tech": ["HTML", "JavaScript", "CSS", "Cloudflare Pages"],
+        "github": "https://github.com/alton15/spell-checker",
+        "url": "https://spell.kkg-dev.com"
       },
       {
         "name": "auto-card-news",

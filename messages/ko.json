@@ -72,6 +72,18 @@
     "title": "사이드 프로젝트",
     "items": [
       {
+        "name": "komaps",
+        "description": "K-pop·K-드라마 팬을 위한 한국 성지순례 SEO 허브 — 촬영지, 아이돌 카페, 동네 가이드를 영어·일본어·중국어 3개국어로 제공",
+        "highlights": [
+          "MapLibre GL + OpenFreeMap 기반 인터랙티브 디스커버리 맵 (타일 벤더 비용 0)",
+          "Next.js 16 RSC + Drizzle ORM으로 별도 백엔드 없이 Vercel Fluid Compute 단일 런타임 운영",
+          "Cloudflare R2 + Sharp 이미지 파이프라인, DB 기반 sitemap ISR + 시크릿 보호 on-demand revalidate",
+          "HMAC 쿠키 관리자 세션, 위치·드라마·아이돌 M:N 관계 매핑"
+        ],
+        "tech": ["Next.js 16", "React 19", "TypeScript", "Drizzle", "Supabase", "Cloudflare R2", "MapLibre GL", "Vercel"],
+        "url": "https://komaps.app"
+      },
+      {
         "name": "recsys-pipeline",
         "description": "5천만 DAU 커머스 서비스를 위한 프로덕션급 추천 파이프라인 — 4-Plane 아키텍처와 3-Tier 서빙, docker-compose로 로컬 실행, Kubernetes로 500K RPS 스케일링",
         "highlights": [
@@ -83,16 +95,16 @@
         "github": "https://github.com/alton15/recsys-pipeline"
       },
       {
-        "name": "binance-futures-bot",
-        "description": "바이낸스 선물 자동매매 봇 — 기술적 지표 알고리즘 기반, 멀티 에이전트 트레이딩 펌 패턴 적용, AI/LLM 없이 동작",
+        "name": "LoL Spell Checker",
+        "description": "리그 오브 레전드 적팀 소환사 주문 쿨다운 트래커 — 의존성 없는 단일 HTML 페이지를 Cloudflare Pages로 배포",
         "highlights": [
-          "8개 지표 가중 투표 (RSI, MACD, BB, EMA, ATR, ADX, Stochastic) + 프로필별 시그널 품질 필터",
-          "10단계 리스크 관리: 마진 노출 한도, 일일 손실 제한, 드로다운 차단",
-          "적대적 시그널 검증, BM25 상황 메모리, 트레이드 후 리플렉션 시스템",
-          "4가지 트레이딩 프로필 (보수/중립/공격/스캘핑) + 동적 레버리지 조정"
+          "탑·정글·미드·원딜·서폿 5명, 챔피언별 3개 슬롯 (180s/240s/플래시) 동시 추적",
+          "쿨감 토글: Cosmic Insight (+18 가속), Ionian Boots (+10 가속) 자동 반영",
+          "실시간 카운트다운 + ETA 표시, 게임 타이머, 영/한 토글"
         ],
-        "tech": ["Python", "ccxt", "pandas-ta", "APScheduler", "Docker"],
-        "github": "https://github.com/alton15/binance-futures-bot"
+        "tech": ["HTML", "JavaScript", "CSS", "Cloudflare Pages"],
+        "github": "https://github.com/alton15/spell-checker",
+        "url": "https://spell.kkg-dev.com"
       },
       {
         "name": "auto-card-news",
