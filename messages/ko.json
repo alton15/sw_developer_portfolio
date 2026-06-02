@@ -81,7 +81,8 @@
           "HMAC 쿠키 관리자 세션, 위치·드라마·아이돌 M:N 관계 매핑"
         ],
         "tech": ["Next.js 16", "React 19", "TypeScript", "Drizzle", "Supabase", "Cloudflare R2", "MapLibre GL", "Vercel"],
-        "url": "https://komaps.app"
+        "url": "https://komaps.app",
+        "thumbnail": "/projects/komaps.png"
       },
       {
         "name": "recsys-pipeline",

@@ -81,7 +81,8 @@
           "HMAC cookie admin sessions, many-to-many mapping across locations, dramas, and idols"
         ],
         "tech": ["Next.js 16", "React 19", "TypeScript", "Drizzle", "Supabase", "Cloudflare R2", "MapLibre GL", "Vercel"],
-        "url": "https://komaps.app"
+        "url": "https://komaps.app",
+        "thumbnail": "/projects/komaps.png"
       },
       {
         "name": "recsys-pipeline",
