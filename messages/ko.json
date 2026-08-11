@@ -10,7 +10,8 @@
     "experience": "경력",
     "projects": "사이드 프로젝트",
     "skills": "기술 스택",
-    "education": "학력"
+    "education": "학력",
+    "languages": "언어"
   },
   "about": {
     "title": "소개",
@@ -26,13 +27,9 @@
         "role": "백엔드 엔지니어",
         "description": [
           "REST → GraphQL 마이그레이션 — Strawberry + DataLoader로 N+1 제거, 오버페칭 해소 및 클라이언트 개발 생산성 향상",
-          "Scheduler 기반 배치를 RabbitMQ Pub/Sub 환자 단위 이벤트로 전환, 평균 94.8배 처리량 개선 + 실시간 알림 제공",
-          "Retry/DLQ/Sequence + 멱등성 키 기반 메시지 처리 체계로 zero-message-loss 달성",
-          "Scoring Manager 파이프라인 설계 — AI 예측 결과를 환자 차트 컨텍스트와 결합해 임상 의사결정 지원 데이터로 가공",
+          "Scheduler 기반 배치를 RabbitMQ Pub/Sub 환자 단위 이벤트로 전환, 평균 94.8배 처리량 개선 + 실시간 알림 제공, Retry/DLQ + 멱등성 키 기반 처리로 zero-message-loss 달성",
           "헬스케어 RBAC v2.3.0 설계 — UserType/Role/UserGroup 3단계 권한 계산, 기능별 접근 제어(feature-level access), 긴급 접근(break-glass) 소속 단위 grant, single-active-token·bcrypt·AES 암호화 감사 로그",
           "소속(N:M user_group) scope 필터로 대시보드·다운로드의 부서 간 환자 데이터 노출 차단, 소속 제거 시 활성 토큰 무효화 강제 로그아웃 등 세션 무결성 강화",
-          "WeasyPrint 기반 환자 리포트 PDF 엔진 개선 — 페이지네이션/오버플로우 백필 재설계, 렌더링 유령 프래그먼트 버그 수정, 출력형태별 row 상한 분리로 60초 타임아웃 해소, 다운로드 스트림 취소 안정화(ko/en/vn)",
-          "환자 상태 이력에 exclusive lock 적용 + 미성년 환자 삭제 정책으로 데이터 무결성·개인정보 컴플라이언스 강화",
           "Datadog APM + Sentry로 P50/P95/P99 지표 추적, 에러율·서비스 헬스·온콜 알림 구성",
           "AI 에이전트 기반 온콜 봇 — 약 5개월간 29명이 480여 건 요청 처리, 91.7% 해결률, 약 68%가 DM으로 유입되는 일상 도구로 정착, 최근 개발자를 넘어 병원측 VoC 문의 대응까지 확장, 팀 MTTR 20% 단축"
         ],
@@ -176,6 +173,13 @@
         "degree": "컴퓨터공학 학사",
         "details": "재직 중 학위 취득 (2026.02 졸업 예정)"
       }
+    ]
+  },
+  "languages": {
+    "title": "언어",
+    "items": [
+      { "name": "한국어", "level": "Native" },
+      { "name": "English", "level": "Intermediate" }
     ]
   },
   "language": {

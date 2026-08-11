@@ -10,7 +10,8 @@
     "experience": "Experience",
     "projects": "Side Projects",
     "skills": "Skills",
-    "education": "Education"
+    "education": "Education",
+    "languages": "Languages"
   },
   "about": {
     "title": "About",
@@ -26,13 +27,9 @@
         "role": "Backend Engineer",
         "description": [
           "REST → GraphQL migration with Strawberry + DataLoader, eliminating N+1 and over-fetching while improving client development velocity",
-          "Replaced scheduler-based batches with RabbitMQ Pub/Sub per-patient event flow, delivering 94.8x average throughput and real-time alerts",
-          "Built Retry/DLQ/Sequence + idempotency-key handling for zero-message-loss processing",
-          "Designed Scoring Manager pipeline — fused AI model predictions with patient chart context to surface clinical decision support data",
+          "Replaced scheduler-based batches with RabbitMQ Pub/Sub per-patient event flow, delivering 94.8x average throughput and real-time alerts, with Retry/DLQ/idempotency-key handling for zero message loss",
           "Designed healthcare RBAC v2.3.0 — 3-stage UserType/Role/UserGroup permission resolution, feature-level access control, break-glass emergency grants scoped by department, with single-active-token, bcrypt, and AES-encrypted audit logging",
           "Enforced N:M user-group scope filters to stop cross-department patient data exposure in dashboards and downloads, plus active-token invalidation for forced logout on group removal",
-          "Improved the WeasyPrint patient-report PDF engine — reworked pagination/overflow backfill, fixed ghost-fragment rendering bugs, split per-format row limits to resolve a 60s timeout, and hardened download-stream cancellation (ko/en/vn)",
-          "Enforced exclusive locking on patient status history and a minor-patient deletion policy for data integrity and privacy compliance",
           "Tracked P50/P95/P99 with Datadog APM + Sentry, wired error-rate, service-health, and on-call alerting",
           "Built an AI-agent on-call bot — ~480 requests from 29 users over ~5 months, 91.7% resolution rate, ~68% via direct DMs; adopted beyond engineers to help handle customer VoC (hospital-side) inquiries, ~20% team MTTR reduction"
         ],
@@ -176,6 +173,13 @@
         "degree": "B.S. in Computer Science and Engineering",
         "details": "Completed while working full-time (expected graduation Feb 2026)"
       }
+    ]
+  },
+  "languages": {
+    "title": "Languages",
+    "items": [
+      { "name": "Korean", "level": "Native" },
+      { "name": "English", "level": "Intermediate" }
     ]
   },
   "language": {

@@ -5,7 +5,7 @@ import { Github, Linkedin, Mail } from "lucide-react";
 import LanguageToggle from "./LanguageToggle";
 import { useState, useEffect, useRef } from "react";
 
-const navItems = ["about", "experience", "projects", "skills", "education"] as const;
+const navItems = ["about", "experience", "projects", "skills", "education", "languages"] as const;
 
 export default function Header() {
   const t = useTranslations();
